@@ -1,0 +1,20 @@
+/*
+* Thanks to @layer rule, tailwind base get lower "priority"
+* than mantine css rules even if they have same specificity.
+* Thanks to this, we CAN use preflight reset from tailwind.
+*/
+@layer tailwind {
+  @tailwind base;
+}
+/* Mantine core */
+@import '@mantine/core/styles.css';
+
+/* Mantine components */
+@import "@mantine/core/styles/Button.css";
+
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  background-color: red;
+} */

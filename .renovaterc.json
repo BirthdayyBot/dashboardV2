@@ -1,0 +1,32 @@
+{
+	"extends": ["config:recommended", "packages:eslint"],
+	"automergeSchedule": ["before 4am"],
+	"schedule": ["every weekend"],
+	"packageRules": [
+		{
+			"groupName": "all non-major dependencies",
+			"groupSlug": "all-minor-patch",
+			"matchPackagePatterns": ["*"],
+			"matchUpdateTypes": ["minor", "patch"]
+		},
+		{
+			"commitMessageTopic": "Node.js",
+			"excludePackageNames": ["calico/node", "kindest/node"],
+			"matchDatasources": ["docker"],
+			"matchDepNames": ["node"],
+			"matchPackagePatterns": ["/node$"]
+		},
+		{
+            "groupName": "react monorepo",
+			"matchPackageNames": ["@types/react", "@types/react-dom"],
+            "matchPackagePrefixes": ["react"]
+		},
+		{
+            "groupName": "nextjs monorepo",
+			"extends": "monorepo:nextjs"
+		}
+	],
+    "npm": {
+        "minimumReleaseAge": "3 days"
+    }
+}

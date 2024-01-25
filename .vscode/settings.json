@@ -1,0 +1,10 @@
+{
+  "cSpell.words": [
+    "mantine"
+  ],
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.scss": "tailwindcss",
+    "*.sass": "tailwindcss"
+  }
+}
