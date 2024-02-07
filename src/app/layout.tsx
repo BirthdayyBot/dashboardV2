@@ -1,16 +1,18 @@
-
-import { theme } from '../styles/theme';
-import '@styles/globals.scss';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import '@styles/globals.scss';
+import { theme } from '@styles/theme';
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'Birthdayy | Dashboard V2',
+  description: 'Your place to manage your Birthdayy Configurations and Birthdays.',
 };
 
 export default function RootLayout({ children }: { children: any }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      // className={`${hindVadodaraFont.variable} ${rubikFont.variable} ${ralewayFont.variable}`}
+    >
       <head>
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />
