@@ -6,5 +6,16 @@
     "*.css": "tailwindcss",
     "*.scss": "tailwindcss",
     "*.sass": "tailwindcss"
-  }
+  },
+  "files.exclude": {
+    "node_modules": true,
+    "out": true,
+    ".yarn": true,
+    ".next": true,
+    "next-env.d.ts": true,
+    "yarn.lock": true,
+    "package-lock.json": true,
+    ".eslintignore": true,
+    ".eslintrc.json": true,
+  },
 }
