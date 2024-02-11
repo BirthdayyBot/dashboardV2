@@ -1052,12 +1052,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.2.14":
-  version: 18.2.14
-  resolution: "@types/react-dom@npm:18.2.14"
+"@types/react-dom@npm:18.2.19":
+  version: 18.2.19
+  resolution: "@types/react-dom@npm:18.2.19"
   dependencies:
     "@types/react": "npm:*"
-  checksum: c7feb6542dbeb3de18c9c03260229377e0a0d47a3d2c0bb91861996e2353375a45c57de7216edb8b88448584e363677244bd4355ddec45c243e70e777c2a150b
+  checksum: 98eb760ce78f1016d97c70f605f0b1a53873a548d3c2192b40c897f694fd9c8bb12baeada16581a9c7b26f5022c1d2613547be98284d8f1b82d1611b1e3e7df0
   languageName: node
   linkType: hard
 
@@ -1072,14 +1072,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.36":
-  version: 18.2.36
-  resolution: "@types/react@npm:18.2.36"
+"@types/react@npm:18.2.55":
+  version: 18.2.55
+  resolution: "@types/react@npm:18.2.55"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 4dac0a9f808b0da01029146efe7eeed454da68d01f0f73d417c95d691460f210b9baeb5fa756015f5a048825a1145a7dcb6c6d9c3e4e7876c683edf9892c383b
+  checksum: bf8fe19e73575489e63c0726355f164157cd69e75f2a862436ad2c0586e732cb953a7255a6bc73145e8f9506ee7a723f9a569ca9a39c53984e5b12b84e1c718a
   languageName: node
   linkType: hard
 
@@ -1477,8 +1477,8 @@ __metadata:
     "@radix-ui/react-slot": "npm:^1.0.2"
     "@tabler/icons-react": "npm:^2.47.0"
     "@types/node": "npm:20.8.10"
-    "@types/react": "npm:18.2.36"
-    "@types/react-dom": "npm:18.2.14"
+    "@types/react": "npm:18.2.55"
+    "@types/react-dom": "npm:18.2.19"
     autoprefixer: "npm:^10.4.17"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.0"
