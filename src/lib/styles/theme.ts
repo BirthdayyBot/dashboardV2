@@ -28,5 +28,4 @@ export const theme = createTheme({
 		fontFamily: rubikFont.style.fontFamily,
 		// fontFamily: ralewayFont.style.fontFamily,
 	},
-	other: {},
 });
