@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: any }) {
       </head>
       <body
         className={cn(
-          'min-h-screen bg-background font-body font-heading antialiased',
+          'min-h-screen bg-background font-rubik font-hind-vadodara font-sans antialiased',
           hindVadodaraFont.variable,
           rubikFont.variable,
         )}
