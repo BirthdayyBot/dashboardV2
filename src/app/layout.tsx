@@ -1,7 +1,8 @@
-import NavbarComponent from '@components/navbar/navbar';
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
-import '@styles/globals.scss';
-import { theme } from '@styles/theme';
+import AppContextProvider from '@/provider/provider';
+import { cn } from '@/utils/shadcn';
+import '@styles/globals.css';
+import { hindVadodaraFont, rubikFont } from '@styles/theme/fonts';
+import NavbarComponent from 'src/components/navbar/navbar';
 
 export const metadata = {
   title: 'Birthdayy | Dashboard V2',
@@ -12,43 +13,21 @@ export default function RootLayout({ children }: { children: any }) {
   return (
     <html lang="en">
       <head>
-        <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no" />
       </head>
-      <body>
-        <MantineProvider theme={theme} defaultColorScheme="light">
+      <body
+        className={cn(
+          'min-h-screen bg-background font-body font-heading antialiased',
+          hindVadodaraFont.variable,
+          rubikFont.variable,
+        )}
+      >
+        <AppContextProvider>
           <NavbarComponent />
           {children}
-        </MantineProvider>
+        </AppContextProvider>
       </body>
     </html>
   );
 }
-
-/**
- *
- *  <AppShell
-      header={{ height: 60 }}
-      navbar={{
-        width: 300,
-        breakpoint: 'sm',
-        collapsed: { mobile: !opened },
-      }}
-      padding="md"
-    >
-      <AppShell.Header>
-        <Burger
-          opened={opened}
-          onClick={toggle}
-          hiddenFrom="sm"
-          size="sm"
-        />
-        <div>Logo</div>
-      </AppShell.Header>
-
-      <AppShell.Navbar p="md">Navbar</AppShell.Navbar>
-
-      <AppShell.Main>Main</AppShell.Main>
-    </AppShell>
- */

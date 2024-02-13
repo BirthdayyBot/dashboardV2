@@ -1,6 +1,8 @@
 {
   "cSpell.words": [
-    "mantine"
+    "mantine",
+    "shadcn",
+    "vadodara"
   ],
   "files.associations": {
     "*.css": "tailwindcss",

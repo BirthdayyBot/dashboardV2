@@ -1,21 +1,13 @@
-import MantineTryout from '@components/try';
-import { Button, Container, Title } from '@mantine/core';
-import Link from 'next/link';
+import { Button } from '@/ui/button';
 
 const Tryout: React.FC = () => {
   return (
     <>
-      <MantineTryout />
-
-      <Container>
-        <h1>Hello World H1</h1>
-        <Title order={2}>Hello World Title</Title>
-        <Title order={3}>Hello World Title</Title>
-        <p>Hello World Text</p>
-        <Button component={Link} href="/hello">
-          Next link button
-        </Button>
-      </Container>
+      <div className="container">
+        <h1 className="font-heading">Hello World H1</h1>
+        <p className="font-body">Hello World Text</p>
+        <Button>Primary</Button>
+      </div>
     </>
   );
 };
