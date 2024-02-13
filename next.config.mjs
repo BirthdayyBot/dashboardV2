@@ -40,16 +40,9 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'bulma.io',
-      },
-      {
-        protocol: 'https',
         hostname: 'files.schunk.dev',
       },
     ],
-  },
-  experimental: {
-    optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   },
 };
 

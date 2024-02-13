@@ -1,5 +1,6 @@
 import { Button } from '@/ui/button';
 import { H1 } from '@/ui/typography';
+import { Camera } from 'lucide-react';
 
 const Tryout: React.FC = () => {
   return (
@@ -16,7 +17,9 @@ const Tryout: React.FC = () => {
           <Button variant={'ghost'}>Ghost</Button>
           <Button variant={'link'}>Link</Button>
           <Button variant={'outline'}>Outline</Button>
-          <Button variant={'expandIcon'}>Expand Icon</Button>
+          <Button variant={'expandIcon'} Icon={<Camera color="red" size={48} />} iconPlacement="right">
+            Expand Icon
+          </Button>
           <Button variant={'ringHover'}>Ring Hover</Button>
           <Button variant={'shine'}>Shine</Button>
           <Button variant={'gooeyRight'}>Gooey Right</Button>

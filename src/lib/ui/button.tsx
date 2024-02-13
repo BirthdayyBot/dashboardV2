@@ -43,7 +43,7 @@ const buttonVariants = cva(
 );
 
 interface IconProps {
-  Icon: React.ElementType;
+  Icon: React.ReactNode;
   iconPlacement: 'left' | 'right';
 }
 
@@ -67,13 +67,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps & ButtonIconProps
       <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props}>
         {Icon && iconPlacement === 'left' && (
           <div className="w-0 translate-x-[0%] pr-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-100 group-hover:pr-2 group-hover:opacity-100">
-            <Icon />
+            {Icon}
           </div>
         )}
         {props.children}
         {Icon && iconPlacement === 'right' && (
           <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-2 group-hover:opacity-100">
-            <Icon />
+            {Icon}
           </div>
         )}
       </Comp>
