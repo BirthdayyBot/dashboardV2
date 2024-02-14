@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: any }) {
       >
         <AppContextProvider>
           <NavbarComponent />
-          {children}
+          <div className="container">{children}</div>
         </AppContextProvider>
       </body>
     </html>
