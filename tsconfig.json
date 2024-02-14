@@ -32,12 +32,15 @@
       }
     ],
     "paths": {
+      "@/*": [
+        "src/lib/*"
+      ],
       "@components/*": [
         "src/components/*"
       ],
-      "@*": [
-        "src/lib/*"
-      ]
+      "@styles/*": [
+        "src/styles/*"
+      ],
     },
   },
   "include": [
