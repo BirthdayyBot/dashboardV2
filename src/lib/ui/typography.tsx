@@ -3,8 +3,7 @@ import Anchor from '@components/utils/anchor';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 import React from 'react';
-
-const headingVariants = cva('font-bold text-primary font-heading', {
+const headingVariants = cva('font-bold text-primary', {
   variants: {
     variant: {
       h1: 'leading-14 text-4xl lg:text-5xl',
@@ -13,7 +12,7 @@ const headingVariants = cva('font-bold text-primary font-heading', {
       h4: 'leading-8 text-xl lg:text-2xl',
       h5: 'leading-8 text-lg lg:text-xl',
       h6: 'leading-7 text-sm lg:text-base',
-      p: 'leading-5 text-lg lg:text-xl font-normal',
+      p: 'leading-5 text-lg lg:text-xl font-body',
     },
   },
   defaultVariants: {
@@ -27,28 +26,46 @@ type BaseHeadingProps = {
   className?: string;
   asChild?: boolean;
   anchor?: string;
+  args?: HeadingArgs;
 } & React.HTMLAttributes<HTMLHeadingElement> &
   VariantProps<typeof headingVariants>;
 
-const BaseHeading = ({ children, className, variant = 'h6', asChild = false, anchor, ...props }: BaseHeadingProps) => {
-  const Comp = asChild ? Slot : variant;
+type HeadingArgs = {
+  alignAnchor?: 'close' | 'spaced';
+  alwaysDisplay?: boolean;
+  disableCopyToClipboard?: boolean;
+};
 
+const BaseHeading = ({
+  children,
+  className,
+  variant = 'h6',
+  asChild = false,
+  anchor,
+  args: { alignAnchor = 'close', alwaysDisplay = false, disableCopyToClipboard = false } = {},
+  ...props
+}: BaseHeadingProps) => {
+  const Comp = asChild ? Slot : variant;
   return (
     <div className="group">
       <Comp
         id={anchor}
         {...props}
         className={cn(
-          anchor && 'flex scroll-m-20 items-center', // modify `scroll-m-20` according to your header height.
+          anchor && 'flex scroll-m-20 items-center',
           headingVariants({ variant, className }),
+          alignAnchor === 'spaced' && 'justify-between',
         )}
       >
         {children}
-        {anchor && <Anchor anchor={anchor} />}
+        {anchor && (
+          <Anchor anchor={anchor} alwaysDisplay={alwaysDisplay} disableCopyToClipboard={disableCopyToClipboard} />
+        )}
       </Comp>
     </div>
   );
 };
+
 type TypographyProps = Omit<BaseHeadingProps, 'variant'>;
 
 const H1 = (props: TypographyProps) => {
@@ -80,8 +97,3 @@ const P = (props: TypographyProps) => {
 };
 
 export { H1, H2, H3, H4, H5, H6, P };
-
-//another
-export function H1Test({ children }: { children: string }) {
-  return <h1 className="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">{children}</h1>;
-}
