@@ -8,14 +8,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
-        destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
+        default: 'bg-primary text-primary-foreground hover:bg-primary/90 border border-primary-foreground/10',
         outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
-        secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+        secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-secondary-foreground/10',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
         // https://ui.jln.dev/feedback-colors-generator-for-shadcn-ui
-        destructiveNew:
+        destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90 border border-destructive-foreground/10',
         success: 'bg-success text-success-foreground hover:bg-success/90 border border-success-foreground/10',
         warning: 'bg-warning text-warning-foreground hover:bg-warning/90 border border-warning-foreground/10',
