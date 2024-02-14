@@ -1,5 +1,5 @@
 import { Button } from '@/ui/button';
-import { H1, H5 } from '@/ui/typography';
+import { H1, H3, H5 } from '@/ui/typography';
 import { Camera } from 'lucide-react';
 
 const Tryout: React.FC = () => {
@@ -10,7 +10,15 @@ const Tryout: React.FC = () => {
         <p className="font-body">Hello World Text</p>
         <H1>Hello World H1</H1>
         <H1 anchor="buttons">Buttons</H1>
-        <H5 anchor="buttonsh5">Buttons</H5>
+        <H3
+          anchor="buttonsh3"
+          args={{
+            alwaysDisplay: true,
+          }}
+        >
+          Button Close Anchor
+        </H3>
+        <H5 anchor="buttonsh5">Buttons Anchor Far</H5>
         <div className="buttonGroup grid grid-cols-6 gap-3">
           <Button>Primary</Button>
           <Button variant={'secondary'}>Secondary</Button>

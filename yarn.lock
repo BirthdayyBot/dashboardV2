@@ -198,15 +198,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:7.4.2":
-  version: 7.4.2
-  resolution: "@mantine/hooks@npm:7.4.2"
-  peerDependencies:
-    react: ^18.2.0
-  checksum: b277501160741f09e2aa7ceff0592ef74e8e3bea253db74e6f77e7c51ce38bc81114fafe8e2ce1e6d8c0e645649dedf59ddf800305a27d56ad44bb39fe2e4abd
-  languageName: node
-  linkType: hard
-
 "@next/env@npm:14.0.1":
   version: 14.0.1
   resolution: "@next/env@npm:14.0.1"
@@ -1355,7 +1346,6 @@ __metadata:
   resolution: "birthdayy-dashboardv2@workspace:."
   dependencies:
     "@hookform/resolvers": "npm:^3.3.4"
-    "@mantine/hooks": "npm:7.4.2"
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@radix-ui/react-checkbox": "npm:^1.0.4"
     "@radix-ui/react-dropdown-menu": "npm:^2.0.6"
