@@ -2,6 +2,7 @@ import AppContextProvider from '@/provider/provider';
 import Container from '@/ui/container';
 import { cn } from '@/utils/shadcn';
 import NavbarComponent from '@components/header/header';
+import { TailwindIndicator } from '@components/TailwindIndicator';
 import '@styles/globals.css';
 import { hindVadodaraFont, rubikFont } from '@styles/theme/fonts';
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: any }) {
           <NavbarComponent />
           {/* <div className="container">{children}</div> */}
           <Container>{children}</Container>
+          <TailwindIndicator />
         </AppContextProvider>
       </body>
     </html>
