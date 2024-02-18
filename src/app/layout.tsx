@@ -1,8 +1,9 @@
 import AppContextProvider from '@/provider/provider';
+import Container from '@/ui/container';
 import { cn } from '@/utils/shadcn';
+import NavbarComponent from '@components/header/header';
 import '@styles/globals.css';
 import { hindVadodaraFont, rubikFont } from '@styles/theme/fonts';
-import NavbarComponent from 'src/components/navbar/navbar';
 
 export const metadata = {
   title: 'Birthdayy | Dashboard V2',
@@ -25,7 +26,8 @@ export default function RootLayout({ children }: { children: any }) {
       >
         <AppContextProvider>
           <NavbarComponent />
-          <div className="container">{children}</div>
+          {/* <div className="container">{children}</div> */}
+          <Container>{children}</Container>
         </AppContextProvider>
       </body>
     </html>
