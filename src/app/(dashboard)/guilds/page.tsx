@@ -6,7 +6,7 @@ const GuildsPage: React.FC = () => {
   return (
     <div className="GuildsPage">
       <H2>Guild Overview</H2>
-      <H5 className="text-white">Select a guild to continue</H5>
+      <H5 className="text-inherit">Select a guild to continue</H5>
       <div className="mt-3">
         <Suspense fallback={<GuildDisplayComponent loading />}>
           <GuildDisplayComponent />

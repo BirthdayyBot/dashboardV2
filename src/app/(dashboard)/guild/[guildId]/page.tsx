@@ -1,5 +1,7 @@
+import { fetchDiscordGuildInformation } from '@/utils/discord';
 import GuildConfigComponent from '@components/GuildDetail/GuildConfig';
 import GuildInformationDisplayComponent from '@components/GuildDetail/GuildInformationDisplay';
+import DebugComponent from '@components/utils/debug';
 
 type GuildDetailPageProps = {
   params: {
@@ -7,13 +9,20 @@ type GuildDetailPageProps = {
   };
 };
 
-export default function GuildDetailPage({ params }: GuildDetailPageProps) {
+//create server function that fetches guild information with the guildId
+async function fetchGuildInformation(guildId: string) {
+  'use server';
+  return fetchDiscordGuildInformation(guildId);
+}
+
+export default async function GuildDetailPage({ params }: GuildDetailPageProps) {
   const { guildId } = params;
+  const guildInformation = await fetchGuildInformation(guildId);
   return (
-    <div>
-      guild detail page {guildId}
-      <GuildInformationDisplayComponent guildId={guildId} />
+    <div className="GuildDetailPage">
+      <GuildInformationDisplayComponent guildId={guildId} guildData={guildInformation} />
       <GuildConfigComponent guildId={guildId} />
+      <DebugComponent data={guildInformation} />
     </div>
   );
 }

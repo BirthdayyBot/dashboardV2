@@ -3,7 +3,7 @@ import Anchor from '@components/utils/anchor';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 import React from 'react';
-const headingVariants = cva('font-bold text-primary font-heading', {
+const headingVariants = cva('font-bold font-heading', {
   variants: {
     variant: {
       h1: 'leading-14 text-4xl lg:text-5xl',
