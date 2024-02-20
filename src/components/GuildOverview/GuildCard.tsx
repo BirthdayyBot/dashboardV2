@@ -36,14 +36,16 @@ const GuildCard: FC<GuildCardProps> = (props) => {
 
   return (
     <Link href={`${guildId}`}>
-      <Card className={guildCardClassName}>
+      <Card className={`${guildCardClassName} group`}>
         <Image
           src={iconUrl}
           alt="GuildIcon"
           width={imageSize}
           height={imageSize}
           draggable="false"
-          className={`rounded-md ${!botAdded ? 'grayscale' : ''}`}
+          className={`rounded-md grayscale transition-all duration-300 ${
+            !botAdded ? 'grayscale-0' : ''
+          } group-hover:grayscale-0`}
         />
         <div className="mt-2 font-heading">
           <Label>{guildName}</Label>

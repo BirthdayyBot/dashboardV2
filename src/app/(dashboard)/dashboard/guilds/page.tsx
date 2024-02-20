@@ -1,14 +1,17 @@
+import { H2, H5 } from '@/ui/typography';
 import { GuildDisplayComponent } from '@components/GuildDisplayComponent';
 import { Suspense } from 'react';
 
 const GuildsPage: React.FC = () => {
   return (
     <div className="GuildsPage">
-      <h3 className="font-heading font-bold text-3xl">GuildsPage</h3>
-      {/* Grid with cards of icon, names of the guild. */}
-      <Suspense fallback={<GuildDisplayComponent loading />}>
-        <GuildDisplayComponent />
-      </Suspense>
+      <H2>Guild Overview</H2>
+      <H5 className="text-white">Select a guild to continue</H5>
+      <div className="mt-3">
+        <Suspense fallback={<GuildDisplayComponent loading />}>
+          <GuildDisplayComponent />
+        </Suspense>
+      </div>
     </div>
   );
 };
