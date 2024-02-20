@@ -7,6 +7,7 @@
     "doppler.doppler-vscode",
     "usernamehw.errorlens",
     "dbaeumer.vscode-eslint",
+    "heybourn.headwind"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []

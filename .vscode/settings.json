@@ -23,4 +23,6 @@
   },
   "doppler.autocomplete.enable": true,
   "doppler.hover.enable": true,
+  "headwind.prependCustomClasses": true,
+  "headwind.runOnSave": true
 }
