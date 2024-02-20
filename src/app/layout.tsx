@@ -1,5 +1,4 @@
 import AppContextProvider from '@/provider/provider';
-import Container from '@/ui/container';
 import { cn } from '@/utils/shadcn';
 import NavbarComponent from '@components/header/header';
 import { TailwindIndicator } from '@components/TailwindIndicator';
@@ -27,8 +26,8 @@ export default function RootLayout({ children }: { children: any }) {
       >
         <AppContextProvider>
           <NavbarComponent />
-          {/* <div className="container">{children}</div> */}
-          <Container>{children}</Container>
+          <div className="container">{children}</div>
+          {/* <Container>{children}</Container> */}
           <TailwindIndicator />
         </AppContextProvider>
       </body>
