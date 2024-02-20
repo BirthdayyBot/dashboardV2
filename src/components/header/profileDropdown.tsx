@@ -7,14 +7,23 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/ui/dropdown-menu';
+import Image from 'next/image';
 
 const ProfileButton = () => {
+  const avatarFallback = 'XX';
+  const avatarImage = '/images/default_pfp.png';
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="cursor-pointer">
+        {/* <Avatar>
+          <AvatarImage src={avatarFallback} />
+          <AvatarFallback>{avatarFallback}</AvatarFallback>
+        </Avatar> */}
         <Avatar>
-          <AvatarImage src="/images/default_pfp.png" />
-          <AvatarFallback>XX</AvatarFallback>
+          <AvatarImage asChild src={avatarImage} draggable={false}>
+            <Image src={avatarImage} alt="logo" width={40} height={40} />
+          </AvatarImage>
+          <AvatarFallback>{avatarFallback}</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent>

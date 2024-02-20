@@ -37,8 +37,12 @@ const NavbarComponent: React.FC = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem className="space-x-5">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Documentation</NavigationMenuLink>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Documentation</NavigationMenuLink>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/guilds">
+                  Guilds
+                </NavigationMenuLink>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/guild/1234">
+                  Guild
+                </NavigationMenuLink>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>Documentation</NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
