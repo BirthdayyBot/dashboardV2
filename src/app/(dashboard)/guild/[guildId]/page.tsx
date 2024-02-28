@@ -1,5 +1,5 @@
 import { fetchDiscordGuildInformation } from '@/utils/discord';
-import GuildConfigComponent from '@components/GuildDetail/GuildConfig';
+import GuildConfigComponent from '@components/GuildConfig/GuildConfig';
 import GuildInformationDisplayComponent from '@components/GuildDetail/GuildInformationDisplay';
 import DebugComponent from '@components/utils/debug';
 
@@ -22,6 +22,7 @@ export default async function GuildDetailPage({ params }: GuildDetailPageProps) 
     <div className="GuildDetailPage">
       <GuildInformationDisplayComponent guildId={guildId} guildData={guildInformation} />
       <GuildConfigComponent guildId={guildId} />
+      {/* <AutoFormComponent /> */}
       <DebugComponent data={guildInformation} />
     </div>
   );
