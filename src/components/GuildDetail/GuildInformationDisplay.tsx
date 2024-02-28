@@ -34,7 +34,7 @@ export default async function GuildInformationDisplayComponent({
         style={{ backgroundImage: 'url(http://localhost:3000/images/banner.png)' }} // Improve the Url of the banner
       >
         <div className="guildIcon flex justify-center w-full">
-          <div className="border-primarybg-background bg-opacity-70 mx-auto bg-black border-4 rounded-lg">
+          <div className="border-primary bg-background bg-opacity-70 mx-auto bg-black border-4 rounded-lg">
             <Image
               src={guildData.icon ? formatGuildIcon(guildData.icon, guildData.id) : '/images/logo.webp'}
               alt="guild icon"
