@@ -14,7 +14,7 @@ const GuildConfigComponent: FC<GuildConfigComponentProps> = ({ children, guildId
     <div className="GuildConfigComponent">
       <H3>GuildConfigComponent</H3>
       <AutoForm formSchema={TimezoneZodSchema}>{/* <AutoFormSubmit>Send now</AutoFormSubmit> */}</AutoForm>
-
+      {/* <AutoForm formSchema={BirthdayChannelZodSchema} /> */}
       {children}
     </div>
   );
