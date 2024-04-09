@@ -1,6 +1,7 @@
 'use client';
 import { timezonesOffsets } from '@/types/config';
 import { Input, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/ui';
+import { Textarea } from '@/ui/textarea';
 import { APIChannel, APIRole } from 'discord-api-types/v10';
 import { useState } from 'react';
 
@@ -19,6 +20,13 @@ interface ConfigChannelInputProps {
 
 interface ConfigTimezoneOffsetInputProps {
   defaultTimezoneOffset: string;
+  option: 1 | 2;
+  guildId: string;
+}
+
+interface ConfigBirthdayMessageInputProps {
+  defaultBirthdayMessage: string;
+  premium: boolean;
   guildId: string;
 }
 
@@ -68,25 +76,48 @@ export function ConfigChannelInput({ channels, defaultChannel }: ConfigChannelIn
     </div>
   );
 }
-export function ConfigTimezoneOffsetInput({ defaultTimezoneOffset }: ConfigTimezoneOffsetInputProps) {
+export function ConfigTimezoneOffsetInput({ defaultTimezoneOffset, option }: ConfigTimezoneOffsetInputProps) {
   const [selectedTimezone, setSelectedTimezone] = useState<string>(defaultTimezoneOffset);
 
   return (
     <div className="ConfigTimezoneOffsetInput">
-      <Input type="number" defaultValue={defaultTimezoneOffset} onChange={(e) => setSelectedTimezone(e.target.value)} />
+      {option === 1 ? (
+        <Input
+          type="number"
+          defaultValue={defaultTimezoneOffset}
+          onChange={(e) => setSelectedTimezone(e.target.value)}
+          max={'12'}
+          min={'-11'}
+          step={'1'}
+          placeholder="Timezone offset"
+        />
+      ) : (
+        <Select value={selectedTimezone}>
+          <SelectTrigger>
+            <SelectValue placeholder={defaultTimezoneOffset ?? 'Select a timezone offset'} />
+          </SelectTrigger>
+          <SelectContent>
+            {timezonesOffsets.map((timezone) => (
+              <SelectItem key={timezone} value={timezone}>
+                {timezone}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      )}
+    </div>
+  );
+}
 
-      <Select value={selectedTimezone}>
-        <SelectTrigger>
-          <SelectValue placeholder={defaultTimezoneOffset ?? 'Select a timezone offset'} />
-        </SelectTrigger>
-        <SelectContent>
-          {timezonesOffsets.map((timezone) => (
-            <SelectItem key={timezone} value={timezone}>
-              {timezone}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+export function ConfigBirthdayMessageInput({
+  defaultBirthdayMessage,
+  premium,
+  guildId,
+}: ConfigBirthdayMessageInputProps) {
+  return (
+    <div className="ConfigBirthdayMessageInput">
+      <Input type="text" defaultValue={defaultBirthdayMessage} placeholder="Birthday message" disabled={!premium} />
+      <Textarea placeholder="Happy Birthday!" disabled={!premium} rows={4} />
     </div>
   );
 }

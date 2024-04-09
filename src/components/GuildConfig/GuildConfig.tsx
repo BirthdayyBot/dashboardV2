@@ -1,6 +1,11 @@
 import { GuildChannelInfoMock, GuildInfoMock } from '@/mock/guild.mock';
 import { H3 } from '@/ui/typography';
-import { ConfigChannelInput, ConfigRoleInput, ConfigTimezoneOffsetInput } from './ConfigInput';
+import {
+  ConfigBirthdayMessageInput,
+  ConfigChannelInput,
+  ConfigRoleInput,
+  ConfigTimezoneOffsetInput,
+} from './ConfigInput';
 
 interface GuildConfigComponentProps {
   guildId: string;
@@ -23,7 +28,13 @@ export default function GuildConfigComponent({ children, guildId }: GuildConfigC
         channels={GuildChannelInfoMock}
         defaultChannel="1080819909317099541"
       />
-      <ConfigTimezoneOffsetInput defaultTimezoneOffset={'0'} guildId="980559116076470272" />
+      <ConfigTimezoneOffsetInput defaultTimezoneOffset={'0'} guildId="980559116076470272" option={2} />
+      <br />
+      <ConfigBirthdayMessageInput
+        defaultBirthdayMessage="Happy Birthday!"
+        premium={true}
+        guildId="980559116076470272"
+      />
     </div>
   );
 }
