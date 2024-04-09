@@ -336,3 +336,62 @@ export const GuildInfoMock: APIGuild = {
 	system_channel_flags: GuildSystemChannelFlags.SuppressGuildReminderNotifications,
 	description: null,
 };
+
+export const GuildChannelInfoMock = [
+	{
+		id: '1086294199625846875',
+		name: 'general',
+		type: 0,
+		nsfw: false,
+		permissions: '268435456',
+		position: 0,
+	},
+	{
+		id: '1086294199625846835',
+		name: 'random',
+		type: 0,
+		nsfw: false,
+		permissions: '268435456',
+		position: 0,
+	},
+	{
+		id: '1086294199625845875',
+		name: 'announcements',
+		type: 0,
+		nsfw: false,
+		permissions: '268435456',
+		position: 0,
+	},
+	{
+		id: '1086294199625846865',
+		name: 'bot-commands',
+		type: 0,
+		nsfw: false,
+		permissions: '268435456',
+		position: 0,
+	},
+	{
+		id: '1086294199225846875',
+		name: 'bot-commands-2',
+		type: 0,
+		nsfw: false,
+		permissions: '268435456',
+		position: 0,
+	},
+	{
+		id: '1086294199665846875',
+		name: 'bot-commands-3',
+		type: 0,
+		nsfw: false,
+		permissions: '268435456',
+		position: 0,
+	},
+	{
+		id: '1086214199625846875',
+		name: 'bot-commands-4',
+		type: 0,
+		nsfw: false,
+		permissions: '268435456',
+		position: 0,
+	},
+];

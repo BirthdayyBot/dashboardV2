@@ -1,23 +1,29 @@
-'use client';
-import { TimezoneZodSchema } from '@/schema/config';
-import AutoForm from '@/ui/auto-form';
+import { GuildChannelInfoMock, GuildInfoMock } from '@/mock/guild.mock';
 import { H3 } from '@/ui/typography';
-import { FC } from 'react';
+import { ConfigChannelInput, ConfigRoleInput, ConfigTimezoneOffsetInput } from './ConfigInput';
 
 interface GuildConfigComponentProps {
   guildId: string;
   children?: React.ReactNode;
 }
 
-const GuildConfigComponent: FC<GuildConfigComponentProps> = ({ children, guildId }) => {
+export default function GuildConfigComponent({ children, guildId }: GuildConfigComponentProps) {
   return (
     <div className="GuildConfigComponent">
       <H3>GuildConfigComponent</H3>
-      <AutoForm formSchema={TimezoneZodSchema}>{/* <AutoFormSubmit>Send now</AutoFormSubmit> */}</AutoForm>
-
-      {children}
+      <ConfigRoleInput
+        configType="role"
+        guildId="980559116076470272"
+        roles={GuildInfoMock.roles}
+        defaultRole="980560581306232844"
+      />
+      <ConfigChannelInput
+        configType="channel"
+        guildId="980559116076470272"
+        channels={GuildChannelInfoMock}
+        defaultChannel="1080819909317099541"
+      />
+      <ConfigTimezoneOffsetInput defaultTimezoneOffset={'0'} guildId="980559116076470272" />
     </div>
   );
-};
-
-export default GuildConfigComponent;
+}
