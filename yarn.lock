@@ -1736,7 +1736,7 @@ __metadata:
     postcss: "npm:^8.4.31"
     postcss-simple-vars: "npm:^7.0.1"
     react: "npm:18.2.0"
-    react-day-picker: "npm:^8.10.0"
+    react-day-picker: "npm:^9.0.0"
     react-dom: "npm:18.2.0"
     react-hook-form: "npm:^7.50.1"
     tailwind-merge: "npm:^2.2.1"
@@ -1998,6 +1998,13 @@ __metadata:
   version: 3.3.1
   resolution: "date-fns@npm:3.3.1"
   checksum: 10/98231936765dfb6fc6897676319b500a06a39f051b2c3ecbdd541a07ce9b1344b770277b8bfb1049fb7a2f70bf365ac8e6f1e2bb452b10e1a8101d518ca7f95d
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "date-fns@npm:3.6.0"
+  checksum: 10/cac35c58926a3b5d577082ff2b253612ec1c79eb6754fddef46b6a8e826501ea2cb346ecbd211205f1ba382ddd1f9d8c3f00bf433ad63cc3063454d294e3a6b8
   languageName: node
   linkType: hard
 
@@ -4206,13 +4213,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-day-picker@npm:^8.10.0":
-  version: 8.10.0
-  resolution: "react-day-picker@npm:8.10.0"
+"react-day-picker@npm:^9.0.0":
+  version: 9.0.4
+  resolution: "react-day-picker@npm:9.0.4"
+  dependencies:
+    date-fns: "npm:^3.6.0"
   peerDependencies:
-    date-fns: ^2.28.0 || ^3.0.0
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 10/974496ce004762d521923fc533f6ad6ff8d1f24368220753106617eb199aeb9658b4b7734e12a3fe8a5057840464a3d2d08b4b7f9a84ec77a59c50cc647f6dbc
+    react: ">=16.8.0"
+  checksum: 10/0bc2f8ef94077443fe14e5be48352535580624e1a4321495c0fb969ced0b3fea9c83cd21d53f47f07f482cf4cab415e8e8ef9dd1c55eee1ce9fa93a7ab22affe
   languageName: node
   linkType: hard
 
