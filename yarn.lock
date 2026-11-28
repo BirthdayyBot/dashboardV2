@@ -1247,22 +1247,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tabler/icons-react@npm:^2.47.0":
-  version: 2.47.0
-  resolution: "@tabler/icons-react@npm:2.47.0"
+"@tabler/icons-react@npm:^3.0.0":
+  version: 3.53.0
+  resolution: "@tabler/icons-react@npm:3.53.0"
   dependencies:
-    "@tabler/icons": "npm:2.47.0"
-    prop-types: "npm:^15.7.2"
+    "@tabler/icons": "npm:3.53.0"
   peerDependencies:
-    react: ^16.5.1 || ^17.0.0 || ^18.0.0
-  checksum: 10/8e3cb9ff71d443f31569176f8d10c55bfdc53d5a762c8133472b8729d8d135380161a7af2cba6ac22b1416030326cf363e33467f5e314933526d8efa34feb222
+    react: ">= 16"
+  checksum: 10/31687a7d795e835a1fef9732ebaae88edc510b93017a92835b502983726c745c4aba4c976223850b0c1ac5bc2fc2191759ee37565a8a87f373149070c4c3b2ac
   languageName: node
   linkType: hard
 
-"@tabler/icons@npm:2.47.0":
-  version: 2.47.0
-  resolution: "@tabler/icons@npm:2.47.0"
-  checksum: 10/1bf27e9c1fecdd6a80f8ff94e89c49890ae85ca0baf91fe3b28f9325a54a509281a5859beb0197f1833ba58a2af71c9ebaf025ad37f0e562d305982812d1de13
+"@tabler/icons@npm:3.53.0":
+  version: 3.53.0
+  resolution: "@tabler/icons@npm:3.53.0"
+  checksum: 10/d1d1e72fe38d141a54abf2a7fff53eb7f04a7eeb4e1e0c70c1cb107727f57c060f1d2286f72d5b34330194de278a31787f6db848f7446ef6a02b739350f75d75
   languageName: node
   linkType: hard
 
@@ -1719,7 +1718,7 @@ __metadata:
     "@radix-ui/react-switch": "npm:^1.0.3"
     "@radix-ui/react-toggle": "npm:^1.0.3"
     "@radix-ui/react-tooltip": "npm:^1.0.7"
-    "@tabler/icons-react": "npm:^2.47.0"
+    "@tabler/icons-react": "npm:^3.0.0"
     "@types/node": "npm:20.8.10"
     "@types/react": "npm:18.2.55"
     "@types/react-dom": "npm:18.2.19"
@@ -4181,7 +4180,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
